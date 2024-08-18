@@ -1,0 +1,8 @@
+# Ignore env files
+*.env
+
+# Ignore ini files
+*.ini
+
+ruby-hackathon-432911-091300de6a8b.json
+
