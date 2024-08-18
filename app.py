@@ -23,6 +23,18 @@ app = Flask(__name__)
 def categorize_complaint():
     data = request.get_json()
     
+    def voice_agent_process(response):
+        # Placeholder function - implement actual logic later
+        return " ".join([result.alternatives[0].transcript for result in response.results])
+
+    def text_agent_process(complaint: str):
+        # Placeholder function - implement actual logic later
+        return complaint
+
+    def image_agent_process(whole_text: str):
+        # Placeholder function - implement actual logic later
+        return whole_text
+
     def voice_agent(file_path):
         client = speech.SpeechClient()
         with io.open(file_path, "rb") as f:
